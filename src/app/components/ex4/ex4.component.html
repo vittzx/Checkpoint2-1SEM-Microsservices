@@ -1,0 +1,9 @@
+<h2 >Exercício 4. Criar uma lista usar o for notation e remover a tarefa</h2>
+<ul>
+    @for (t of tarefas; track $index) {
+      <li>{{ t }}</li>
+      <button (click)="removerTarefa($index)">Remover</button>
+    } @empty {
+      <li>Nenhum tarefa na lista</li>
+    }
+</ul>
