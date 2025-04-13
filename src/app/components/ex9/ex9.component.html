@@ -1,0 +1,14 @@
+<h2 >Exercício 9. Exibir produtos com destaque para itens em promoção</h2>
+
+<ul>
+    @for(produto of produtos; track produto.nome){
+        @if(produto.promocao){
+        <li class="promocao"> {{produto.nome}} , Preco {{produto.preco}}, </li>
+        }@else {
+        <li> {{produto.nome}} , Preco {{produto.preco}} </li>
+        }
+    }@empty {
+        <li>Nenhum produto cadastrado</li>
+    }
+    
+</ul>
