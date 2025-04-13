@@ -1,0 +1,9 @@
+<h2 >Exercício 3. Verificação de idade com notation if/else</h2>
+
+<input type="number" [(ngModel)]="idade">
+<p>Idade atual {{idade}}</p>
+@if(idade >= 18){
+    <p>Acesso permitido</p>
+} @else {
+    <p> Acesso negado</p>
+}
