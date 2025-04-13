@@ -1,0 +1,25 @@
+<h2 >Exercício 5. Exibir mensagem com base no status do pedido</h2>
+
+<p>Status pedido {{statusPedido}}</p>
+
+<select [(ngModel)]="statusPedido">
+    <option value="pendente">Pendente</option>
+    <option value="enviado">Enviado</option>
+    <option value="entregue">Entregue</option>
+    <option value="outro">Outro</option>
+</select>
+
+@switch(statusPedido){
+    @case("pendente"){
+        <p>Aguardando confirmação</p>
+    }
+    @case("enviado"){
+        <p>Pedido a caminho</p>
+    }
+    @case("entregue"){
+        <p>Pedido entregue</p>
+    }
+    @default{
+        <p>Status desconhecido</p>
+    }
+}
