@@ -1,0 +1,12 @@
+<h2 >Exercício 8. Login de credencias com if/else notation</h2>
+Email <input type="text" [(ngModel)]="email"> <br>
+Senha <input type="text" [(ngModel)]="senha">  
+
+<!-- Validação com @if -->
+@if (!email || !senha) {
+    <p>Campos obrigatórios!</p>
+  } @else if (!email.includes('@') || senha.length < 6) {
+    <p >Credenciais inválidas!</p>
+  } @else {
+    <p>Login bem-sucedido!</p>
+  }
