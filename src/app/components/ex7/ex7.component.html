@@ -1,0 +1,14 @@
+<h2 >Exercício 7. Valor 1 ou dois</h2>
+
+<input type="text" [(ngModel)]="valor   ">
+@switch (valor) {
+    @case ("1") {
+      <p>Um</p>
+    }
+    @case ("dois") {
+      <p>Dois</p>
+    }
+    @default {
+      <p>Valor não reconhecido</p>
+    }
+  }
