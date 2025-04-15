@@ -1,0 +1,37 @@
+<h2>Exercício 10. Calculadora simples.</h2>
+
+<select [(ngModel)]="opcao">
+    <option value="soma">soma</option>
+    <option value="subtracao">subtracao</option>
+    <option value="multiplicacao">multiplicacao</option>
+    <option value="divisao">divisao</option>
+
+</select>
+<br>
+<input [(ngModel)]="numero1" type="number">
+<br>
+<input [(ngModel)]="numero2" type="number">
+
+@switch (opcao) {
+    @case("soma"){
+        <p>Resultado: {{numero1+numero2}}</p>
+    }
+
+    @case("subtracao"){
+        <p>Resultado: {{numero1-numero2}}</p>
+    }
+
+    @case("multiplicacao"){
+        <p>Resultado: {{numero1*numero2}}</p>
+    }
+
+    @case("divisao"){
+        @if(numero2===0){
+            <p>Erro: divisao por zero</p>
+        }
+
+        @else{
+            <p>Resultado: {{numero1/numero2}}</p>
+        }
+    }
+}

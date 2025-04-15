@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './ex6.component.css'
 })
 export class Ex6Component {
-  usuarios = [
+  usuarios: {nome:string, idade:number} []  = [
     { nome: 'Ana', idade: 25 },
     { nome: 'Carlos', idade: 30 }
   ];
